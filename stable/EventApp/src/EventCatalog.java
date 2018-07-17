@@ -1,11 +1,8 @@
-import java.util.*;
+import java.util.Map;
+import java.util.Set;
 
-/**
- * Created by jonny on 19.06.17.
- */
 public interface EventCatalog {
-    TreeMap<Event,Set<Time>> map = new TreeMap<>();
-    boolean addCatalogEntry(Event e, Set<Time> tSet);
+    boolean addCatalogEntry(Event e, Set<Time> tset);
     boolean addTimeToEvent(Event e,Time t);
     Set<Event> getAllEvents();
     Set<Time> getTimesOfEvent(Event e);

@@ -64,19 +64,19 @@ public class EventCatalogImplTest {
 
         try {
             catalog.addCatalogEntry(null, new HashSet<>(times.get(0)));
-            fail("Event.compareTo() should throw a NullPointerException if the e argument is null!");
+            fail("EventCatalogImpl.addCatalogEntry() should throw a NullPointerException if the e argument is null!");
         } catch (NullPointerException e) {
         }
 
         try {
             catalog.addCatalogEntry(events.get(0), null);
-            fail("Event.compareTo() should throw a NullPointerException if the tSet argument is null!");
+            fail("EventCatalogImpl.addCatalogEntry() should throw a NullPointerException if the tSet argument is null!");
         } catch (NullPointerException e) {
         }
 
         try {
             catalog.addCatalogEntry(events.get(0), nullSet);
-            fail("Event.compareTo() should throw a NullPointerException if one of the objects in the tSet argument is null!");
+            fail("EventCatalogImpl.addCatalogEntry() should throw a NullPointerException if one of the objects in the tSet argument is null!");
         } catch (NullPointerException e) {
         }
     }
